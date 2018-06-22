@@ -5,8 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:XML_SPXX"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="238.795" Width="342.389" Topmost="True" AllowsTransparency="True" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF007ACC" Offset="0"/>
+                <GradientStop Color="#FF007ACC" Offset="0.15"/>
+                <GradientStop Color="White" Offset="0.15"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBox x:Name="Xmlpath" HorizontalAlignment="Left" Height="23" Margin="10,79,0,0" VerticalAlignment="Top" Width="247" AllowDrop="False" IsHitTestVisible="True" IsTabStop="False" TextAlignment="Justify" VerticalContentAlignment="Center" IsReadOnly="True" Focusable="False"/>
+        <Button x:Name="SelectPath" Content="选择" HorizontalAlignment="Left" Margin="257,79,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="SelectPath_Click" Background="#FF007ACC" Foreground="White" BorderBrush="#FF007ACC" Focusable="False"/>
+        <Button x:Name="Start" Content="转换" HorizontalAlignment="Left" Margin="235,198,0,0" VerticalAlignment="Top" Width="97" Height="31" Background="#FF007ACC" Foreground="White" BorderBrush="{x:Null}" Click="Start_Click" Focusable="False"/>
+        <Button x:Name="Close" Content="关闭" HorizontalAlignment="Left" Margin="133,198,0,0" VerticalAlignment="Top" Width="97" Height="31" Background="#FF007ACC" Foreground="White" BorderBrush="{x:Null}" Click="Close_Click" Focusable="False"/>
+        <TextBox x:Name="Xml_savepath" HorizontalAlignment="Left" Height="23" Margin="10,137,0,0" VerticalAlignment="Top" Width="247" AllowDrop="False" IsTabStop="False" IsHitTestVisible="True" TextAlignment="Justify" VerticalContentAlignment="Center" IsReadOnly="True" Focusable="False"/>
+        <Button x:Name="SavePath" Content="选择" HorizontalAlignment="Left" Margin="257,137,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="SavePath_Click" Foreground="White" BorderBrush="#FF007ACC" Background="#FF007ACC" Focusable="False"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="商品编码转换工具" VerticalAlignment="Top" Foreground="White" FontSize="16" Height="22" Width="332" Margin="5,7,0,0" />
+        <Label x:Name="Ver" Content="v99.99.99" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top" Width="78"/>
+        <Label Content="商品和服务税收分类编码XML文件" HorizontalAlignment="Left" Margin="5,57,0,0" VerticalAlignment="Top" Width="194"/>
+        <Label Content="保存路径" HorizontalAlignment="Left" Margin="6,115,0,0" VerticalAlignment="Top"/>
+        <Label Content="(仅支持2.0.23版本导出的编码)" HorizontalAlignment="Left" Margin="165,97,0,0" VerticalAlignment="Top" Width="173" Foreground="#FFE00000"/>
+        <Button x:Name="ToXml23" Content="转2.0.23编码" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81" Margin="251,8,0,0" Click="ToXml23_Click" Background="White" ToolTip="将2.0.23以下商品编码版本转换为2.0.23商品编码(税收编码)"/>
+
     </Grid>
 </Window>
